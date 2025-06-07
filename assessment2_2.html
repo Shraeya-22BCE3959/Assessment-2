@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Link Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    .link-box {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .link-box a {
+      color: blue;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+
+    .link-box a:hover {
+      text-decoration: underline;
+    }
+
+    .email-box {
+      border: 1px solid #aaa;
+      padding: 15px;
+      width: fit-content;
+    }
+
+    .email-box h2 {
+      margin-top: 0;
+    }
+
+    .email-box a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    .email-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="link-box">
+    <p>Click any of the following links</p>
+    <a href="https://example.com" target="_blank">Opens in New</a>
+    <a href="https://example.com" target="_self">Opens in Self</a>
+    <a href="https://example.com" target="_parent">Opens in Parent</a>
+    <a href="https://example.com" target="_top">Opens in Body</a>
+  </div>
+
+  <div class="email-box">
+    <h2>Link to an Email Address</h2>
+    <p>
+      To create a link that opens in the user's email program (to let them send a new email), use <code>mailto:</code> inside the anchor:
+    </p>
+    <a href="mailto:someone@example.com">Send email</a>
+  </div>
+
+</body>
+</html>

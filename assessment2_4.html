@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Appointment Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+    .container {
+      width: 400px;
+      margin: 40px auto;
+      border: 1px solid #ccc;
+      padding: 24px 32px 16px 32px;
+      border-radius: 8px;
+      background: #fff;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 8px;
+      font-size: 1.5em;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      border-bottom: 2px solid #800000;
+      padding-bottom: 8px;
+      color: #222;
+    }
+    form label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+    .row input[type="text"], .row input[type="email"], .row input[type="tel"] {
+      flex: 1;
+    }
+    input[type="text"], input[type="date"], input[type="time"], input[type="email"], input[type="tel"], textarea {
+      width: 100%;
+      padding: 5px;
+      margin-top: 4px;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 50px;
+      resize: none;
+    }
+    .gender {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+    .appt-types {
+      margin-top: 4px;
+      margin-bottom: 12px;
+      font-weight: normal;
+    }
+    .appt-types label {
+      font-weight: normal;
+      display: block;
+      margin-left: 20px;
+    }
+    button, input[type="submit"] {
+      margin-top: 10px;
+      padding: 6px 18px;
+      background: #800000;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover, input[type="submit"]:hover {
+      background: #a00000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Doctor Appointment Form</h2>
+    <form>
+      <label>Appointment Date
+        <input type="date" required>
+      </label>
+      <label>Appointment Time
+        <input type="time" required>
+      </label>
+      <div class="row">
+        <label style="flex:1;">Name
+          <input type="text" required>
+        </label>
+        <label style="flex:1;">Gender
+          <span class="gender">
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female"> Female
+          </span>
+        </label>
+      </div>
+      <div class="row">
+        <label style="flex:1;">Phone
+          <input type="tel" required>
+        </label>
+        <label style="flex:1;">Email
+          <input type="email" required>
+        </label>
+      </div>
+      <label>Address
+        <input type="text">
+      </label>
+      <label>Your Query
+        <textarea></textarea>
+      </label>
+      <label>Appointment Type</label>
+      <div class="appt-types">
+        <label><input type="checkbox"> General checkup</label>
+        <label><input type="checkbox"> Heart checkup</label>
+        <label><input type="checkbox"> Eye checkup</label>
+        <label><input type="checkbox"> Hearing Test</label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
